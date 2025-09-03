@@ -1,6 +1,6 @@
 # main_06_fixed.py: 파일 변경 시 RAG 체인이 올바르게 업데이트되도록 수정한 코드
 import streamlit as st
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import os
 import tempfile
 
@@ -14,7 +14,7 @@ from langchain_core.runnables import RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
 
 # .env 파일에서 API 키 로드
-load_dotenv()
+# load_dotenv()
 
 # --- 1. RAG 시스템을 위한 함수 정의 (기존과 동일) ---
 @st.cache_data(show_spinner="PDF 파일을 처리 중입니다...")
@@ -103,3 +103,4 @@ else:
     st.info("사이드바에서 PDF 파일을 업로드하여 챗봇을 시작하세요.")
     st.session_state.messages = []
     st.session_state.current_file_name = None
+
